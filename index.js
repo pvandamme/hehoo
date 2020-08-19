@@ -8,7 +8,11 @@ client.on("ready", () => {
 client.on("message", (msg) => {
     if (/^(heho+)$/i.test(msg.content)) {
         msg.react("745675324481601668");
-        msg.channel.send("<:heho:745675324481601668>");
+        if (msg.content === "HEHO!") {
+            msg.channel.send(new Discord.MessageAttachment("./heho.jpg"));
+        } else {
+            msg.channel.send("<:heho:745675324481601668>");
+        }
     }
 });
 
