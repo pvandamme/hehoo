@@ -1,0 +1,14 @@
+{
+  "name": "hehoo",
+  "version": "1.0.0",
+  "description": "Discord bot who checks if Niko sent \"heho\" (with one or more \"o\")",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marius Vallas",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
