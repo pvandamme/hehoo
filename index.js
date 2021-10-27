@@ -6,13 +6,16 @@ client.on("ready", () => {
 });
 
 client.on("message", (msg) => {
-    if (/^(HE+HO+)$/.test(msg.content)) {
-        msg.channel.send(new Discord.MessageAttachment("./heho.jpg"));
-        return;
-    }
-    if (/^(he+ho+)$/i.test(msg.content)) {
+    if (/^(HE+\s*HO+)$/.test(msg.content)) {
+        msg.channel.send(new Discord.MessageAttachment("./heho.png"));
+    } else if (/^(he+\s*ho+)$/.test(msg.content)) {
         msg.channel.send('<:heho:748492401286578206>');
-        return;
+    } else if (/^(he+\s*ho+)$/i.test(msg.content)) {
+        msg.channel.send(new Discord.MessageAttachment("./HeEeHoOo.png"));
+    } else if (/^(he+)$/i.test(msg.content)) {
+        msg.channel.send(new Discord.MessageAttachment("./he.png"));
+    } else if (/^(ho+)$/i.test(msg.content)) {
+        msg.channel.send(new Discord.MessageAttachment("./ho.png"));
     }
 });
 
